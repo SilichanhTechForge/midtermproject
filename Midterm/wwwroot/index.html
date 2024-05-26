@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Midterm</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="Content/Midterm.css" />
+    <style>
+        /* Don't show the not-yet-loaded templates */
+        [ws-template], [ws-children-template] {
+            display: none;
+        }
+    </style>
+    <script type="text/javascript" src="Content/Midterm.head.js"></script>
+</head>
+<body>
+    <h1>TO DO LIST RANDOM STYLE</h1>
+    <div id="main" ws-children-template="Main">
+        <ul ws-hole="ListContainer">
+            <li ws-template="ListItem">${Name} 
+        </ul>
+        <div>
+            <input ws-var="Name" placeholder="Name" />
+            <button ws-onclick="Add">Add</button>
+            <div>You are about to add: ${Name}</div>
+            <button ws-onclick="Clear">Clear List</button>
+        </div>
+    </div>
+    <script type="text/javascript" src="Content/Midterm.min.js"></script>
+</body>
+</html>
